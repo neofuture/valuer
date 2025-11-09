@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: auto;
     background: white;
     padding: 2rem;
@@ -39,3 +39,54 @@ button:hover {
     margin-top: 2rem;
     text-align: center;
 }
+
+/* Results Box Styling */
+.results-box {
+    background-color: #e8f5e9;
+    border: 2px solid #66bb6a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.results-header {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.vehicle-info h3 {
+    color: #1b5e20;
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-item .label {
+    font-weight: normal;
+    color: #000000;
+    font-size: 0.75rem;
+}
+
+.info-item .value {
+    color: #424242;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+

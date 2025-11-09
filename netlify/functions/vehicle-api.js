@@ -35,10 +35,13 @@ exports.handler = async (event, context) => {
 
         // Mock data response
         const mockData = {
-            make: 'Ford',
-            model: 'Fiesta',
-            year: 2014,
-            mileage: mileage || 60000,
+            make: 'Vauxhall',
+            model: 'Astra',
+            year: 2019,
+            fuel: 'Petrol',
+            engine: '1,399cc',
+            mileage: mileage || 80000,
+            max_mileage: 80000,
             low_price: 3000,
             avg_price: 3500,
             high_price: 4200

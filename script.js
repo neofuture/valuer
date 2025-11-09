@@ -25,9 +25,39 @@ document.getElementById('lookupForm').addEventListener('submit', async function(
         }
 
         results.innerHTML = `
-        <h3>${data.make} ${data.model} (${data.year})</h3>
-        <p><strong>Mileage:</strong> ${data.mileage} miles</p>
-        <p><strong>Valuation:</strong> £${data.low_price} – £${data.high_price} (Avg: £${data.avg_price})</p>
+        <div class="results-box">
+            <div class="results-header">
+                Vehicle Found
+            </div>
+            <div class="vehicle-info">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="label">Make</span>
+                        <span class="value">${data.make}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Model</span>
+                        <span class="value">${data.model}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Year</span>
+                        <span class="value">${data.year}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Fuel</span>
+                        <span class="value">${data.fuel}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Engine</span>
+                        <span class="value">${data.engine}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Max Mileage</span>
+                        <span class="value">${data.max_mileage.toLocaleString()} mi</span>
+                    </div>
+                </div>
+            </div>
+        </div>
       `;
     } catch (error) {
         const results = document.getElementById('results');
