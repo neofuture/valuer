@@ -90,3 +90,94 @@ button:hover {
     font-weight: 500;
 }
 
+/* Listings Section */
+.listings-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #66bb6a;
+}
+
+.listings-section h4 {
+    color: #2e7d32;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.listing-card {
+    background-color: white;
+    border: 1px solid #a5d6a7;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.listing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.listing-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background-color: #e0e0e0;
+}
+
+.listing-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+.listing-source {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2e7d32;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.listing-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1b5e20;
+    margin: 0;
+    line-height: 1.3;
+    min-height: 2.6rem;
+}
+
+.listing-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1b5e20;
+    margin: 0.25rem 0;
+}
+
+.listing-details {
+    font-size: 0.85rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.listing-seller {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: auto;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e0e0e0;
+}

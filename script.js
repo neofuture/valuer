@@ -55,8 +55,43 @@ document.getElementById('lookupForm').addEventListener('submit', async function(
                         <span class="label">Max Mileage</span>
                         <span class="value">${data.max_mileage.toLocaleString()} mi</span>
                     </div>
+                    <div class="info-item">
+                        <span class="label">Low Price</span>
+                        <span class="value">£${data.low_price.toLocaleString()}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Average Price</span>
+                        <span class="value">£${data.avg_price.toLocaleString()}</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">High Price</span>
+                        <span class="value">£${data.high_price.toLocaleString()}</span>
+                    </div>
                 </div>
             </div>
+            ${data.listings && data.listings.length > 0 ? `
+            <div class="listings-section">
+                <h4>Available Listings (${data.listings.length})</h4>
+                <div class="listings-grid">
+                    ${data.listings.map(listing => `
+                        <a href="${listing.link}" target="_blank" class="listing-card">
+                            <img src="${listing.image}" alt="${listing.title}" class="listing-image">
+                            <div class="listing-content">
+                                <div class="listing-source">${listing.source}</div>
+                                <h5 class="listing-title">${listing.title}</h5>
+                                <div class="listing-price">£${listing.price.toLocaleString()}</div>
+                                <div class="listing-details">
+                                    <span>${listing.mileage.toLocaleString()} mi</span>
+                                    <span>•</span>
+                                    <span>${listing.location}</span>
+                                </div>
+                                <div class="listing-seller">${listing.seller}</div>
+                            </div>
+                        </a>
+                    `).join('')}
+                </div>
+            </div>
+            ` : ''}
         </div>
       `;
     } catch (error) {
