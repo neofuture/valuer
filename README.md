@@ -13,10 +13,10 @@ A simple vehicle valuation lookup tool with a frontend and serverless API.
 ├── package.json            # Root package.json
 ├── netlify/
 │   └── functions/
-│       └── vehicle-api.js  # Netlify serverless function
-└── vehicle-api/            # Local development API (Express)
-    ├── index.js
-    └── package.json
+│       └── vehicle-api.js  # Netlify serverless function (used in production)
+└── vehicle-api/            # Local development API (Express) - OPTIONAL
+    ├── index.js            # Only needed for local testing
+    └── package.json        # Only needed for local testing
 ```
 
 ## Local Development
@@ -98,7 +98,9 @@ Response:
 
 ## Notes
 
-- The `vehicle-api` folder is only for local development
+- The `vehicle-api` folder is **OPTIONAL** - it's only for local development
 - Netlify uses the serverless function in `netlify/functions/vehicle-api.js`
-- No need to move or deploy the Express server to Netlify
+- The Netlify function has NO dependencies (pure Node.js)
+- The Express server in `vehicle-api/` requires dependencies (Express, CORS)
+- **You can delete the `vehicle-api` folder if you don't need local testing**
 

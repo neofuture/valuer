@@ -5,7 +5,13 @@
 node_modules/
 vehicle-api/node_modules/
 
+# Lock files (not using Deno Edge Functions)
+deno.lock
+
 # Logs
 *.log
 npm-debug.log*
+
+# Note: vehicle-api/ folder is for local development only
+# It's not deployed to Netlify (Netlify uses netlify/functions/ instead)
 
