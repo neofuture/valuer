@@ -1,0 +1,9 @@
+{
+  "name": "vehicle-valuation",
+  "version": "1.0.0",
+  "description": "Vehicle valuation lookup tool",
+  "scripts": {
+    "dev": "node vehicle-api/index.js"
+  }
+}
+
